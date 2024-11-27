@@ -1,0 +1,22 @@
+Supongamos que querémos ubicar las distintas cedes de una ONG en el mapa. 
+Debería haber un front con dos funciones: 
+la primera es agregar una nueva sede, colocando el nombre y eligiendo la ubicación en el mapa 
+la segunda es listar las cedes existentes, y mostrarlas en el mapa, 
+también desde esta sección debería poder borrarse las sedes o modificarlas. 
+Eso le pegaría a una API con un post, get, delete. 
+Todo debe estar registrado en el CDK, de tal forma que al hacer el deploy la web quede funcional.
+
+He creado un cdk con un stack que incluye
+Una tabla DynamoDB para almacenar las ubicaciones
+Cuatro funciones Lambda para las operaciones CRUD
+API Gateway para exponer los endpoints REST
+Un bucket S3 para alojar el frontend
+Una distribución CloudFront para servir el frontend
+
+tambien he avanzado en: 
+Crear las funciones Lambda para cada operación CRUD
+Desarrollar el frontend con el mapa interactivo
+
+Me gustaría avanzar en: 
+Configurar el despliegue del frontend
+Probar la integración completa
